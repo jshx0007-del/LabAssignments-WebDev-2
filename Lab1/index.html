@@ -5,40 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Cookie&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+NZ+Basic:wght@100..400&family=Quintessential&family=Story+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Smart Event Dashboard</h1>
-    <div id="add-event-container">
-        <h2>Add New Event</h2>
-        <form action="">
-            <label for="event-name">Event Name:</label>
-            <input type="text" id="event-name" name="event-name" required>
-            <br><br>
-            <label for="event-date">Date:</label>
-            <input type="date" id="event-date" name="event-date" required>
-            <br><br>
-            <label for="event-category">Category:</label>
-            <select name="event-category" id="event-category">
-                <option value="conference">Conference</option>
-                <option value="workshop">Workshop</option>
-                <option value="webinar">Webinar</option>
-                <option value="meetup">Meetup</option>
-                <option value="social">Social</option>
-            </select>
-            <br><br>
-            <label for="event-description">Description:</label>
-            <textarea id="event-description" name="event-description"></textarea>
-            <br><br>
-            <button type="submit">Add Event</button>
-        </form>
-    </div>
-    <div>
-        <h2>My Events</h2>
-        <br>
-        <button id="clear-event">Clear All Events</button>
-        <button id="add-sample">Add Sample Events</button>
-        <div id="all-event-container">
-            Events will be displayed here.
+    <div class="dashboard-container">
+        <div id="add-event-container">
+            <h2>Add New Event</h2>
+            <form action="">
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" name="event-name" required>
+                <label for="event-date">Date:</label>
+                <input type="date" id="event-date" name="event-date" required>
+                <label for="event-category">Category:</label>
+                <select name="event-category" id="event-category">
+                    <option value="conference">Conference</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="webinar">Webinar</option>
+                    <option value="meetup">Meetup</option>
+                    <option value="social">Social</option>
+                </select>
+                <label for="event-description">Description:</label>
+                <textarea id="event-description" name="event-description"></textarea>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+        <div id="events-container">
+            <h2>My Events</h2>
+            <br>
+            <div id="button-group"> 
+                <button id="clear-event">Clear All Events</button>
+                <button id="add-sample">Add Sample Events</button>
+            </div>
+            <div id="all-event-container">
+                Events will be displayed here.
+            </div>
+        </div>
+
+        <div id="dom-section">
+            <h2>DOM Manipulation Section</h2>
+            <div id="display">
+                <span>You Pressed:</span> <span id="pressed-key"></span>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
