@@ -198,8 +198,9 @@ button[type="submit"]:hover {
 }
 .event-title {
     font-size: 18px;
+    text-decoration: underline;
     font-weight: bold;
-    color: #333;
+    color: #194398;
     margin: 0;
 }
 .delete-btn{
@@ -228,10 +229,8 @@ button[type="submit"]:hover {
 .event-details p{
     margin: 8px 0;
     line-height: 1.2;
-}
-.event-date,
-.event.category{
-    color: #333;
+    color: #103682;
+
 }
 .event.description{
     color: #252323;
