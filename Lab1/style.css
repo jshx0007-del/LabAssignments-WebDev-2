@@ -13,13 +13,12 @@ body {
 }
 
 h1 {
-    color: rgb(179, 88, 221);
-    text-decoration: underline;
+    color: rgb(193, 135, 219);
     font-family: 'Changa One', cursive;
     font-size: 50px;
     margin: 0 0 20px 0;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,7 +197,6 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
 }
 .event-title {
-    text-decoration: underline;
     font-size: 18px;
     font-weight: bold;
     color: #333;
@@ -222,7 +220,6 @@ button[type="submit"]:hover {
 .delete-btn:hover {
     background-color: #ff5252;
     transform: scale(1.2);
-    box-shadow: 0 4px 6px rgba(36, 35, 35, 0.5);
 }
 .event-details {
     font-size: 14px;
@@ -232,38 +229,16 @@ button[type="submit"]:hover {
     margin: 8px 0;
     line-height: 1.2;
 }
-.event-date::before {
-    content: "📅";
-    font-size: 14px;
-}
-.event-date {
-    color: #5b7cdb;
-    font-weight: 600;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
+.event-date,
 .event.category{
-    background-color: #5b7cdb;
-    color: white;
-    padding: 6px 16px;
-    border-radius: 20px;
-    border: none;
-    font-weight: 600;
-    font-size: 13px;
-    display: inline-block;
-    margin: 8px 0;
+    color: #333;
 }
-
 .event.description{
     color: #252323;
     font-style: italic;
-    margin-top: 14px;
-    padding-top: 0;
-    border-top: none;
-    line-height: 1.5;
-    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
 }
 
 

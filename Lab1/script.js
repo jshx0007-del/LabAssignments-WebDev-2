@@ -10,6 +10,11 @@ let addSampleBtn = document.getElementById('add-sample');
 function addEventFunction(event) {
     event.preventDefault();
     
+    let emptyMessage = document.getElementById('empty-message');
+    if (emptyMessage) {
+        emptyMessage.style.display = 'none';
+    }
+    
     let card = document.createElement('div');
     card.className = 'event-card';
     
@@ -25,6 +30,7 @@ function addEventFunction(event) {
     deleteBtn.textContent = 'X';
     deleteBtn.onclick = function() {
         card.remove();
+        checkEmpty();
     };
     
     header.appendChild(title);
@@ -58,29 +64,29 @@ function addEventFunction(event) {
     card.appendChild(header);
     card.appendChild(details);
     
-    if (allEventContainer.textContent === 'No events yet!' || 
-        allEventContainer.textContent === 'Events will be displayed here.') {
-        allEventContainer.innerHTML = '';
-    }
-    
     allEventContainer.appendChild(card);
     
     form.reset();
 }
 
 function clearAllEventFunction() {
-    allEventContainer.innerHTML = 'No events yet!';
+    allEventContainer.innerHTML = '<p id="empty-message">Events will be displayed here</p>';
 }
 
 function checkEmpty() {
-    if (allEventContainer.children.length === 0) {
-        allEventContainer.innerHTML = 'No events yet!';
+    let eventCards = allEventContainer.querySelectorAll('.event-card');
+    let emptyMessage = document.getElementById('empty-message');
+    
+    if (eventCards.length === 0) {
+        if (emptyMessage) {
+            emptyMessage.style.display = 'block';
+        } else {
+            allEventContainer.innerHTML = '<p id="empty-message">Events will be displayed here</p>';
+        }
     }
 }
 
 function addSampleEvents() {
-    allEventContainer.innerHTML = '';
-
     eventName.value = 'Tech Conference';
     eventDate.value = '2026-03-20';
     eventCategory.value = 'conference';
